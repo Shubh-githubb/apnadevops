@@ -44,15 +44,43 @@ class Questions extends Migration
                 'type'       => 'TEXT',
                 'null'       => false,
             ],
-            'corret_count' => [
+            'correct' => [
                 'type'       => 'INT',
                 'null'       => false,
             ],
-            'wrong_count' => [
+            'attempts' => [
                 'type'       => 'INT',
                 'null'       => false,
             ],
-            'view' => [
+            'paper_code' => [
+                'type'       => 'TEXT',
+                'null'       => false,
+            ],
+            'test_id' => [
+                'type'       => 'INT',
+                'null'       => false,
+            ],
+            'views' => [
+                'type'       => 'INT',
+                'null'       => false,
+            ],
+            'likes' => [
+                'type'       => 'INT',
+                'null'       => false,
+            ],
+            'difficultly_level' => [
+                'type'       => 'TEXT',
+                'null'       => false,
+            ],
+            'type' => [
+                'type'       => 'TEXT',
+                'null'       => false,
+            ],
+            'marks' => [
+                'type'       => 'INT',
+                'null'       => false,
+            ],
+            'negative_mark' => [
                 'type'       => 'INT',
                 'null'       => false,
             ],
@@ -72,6 +100,6 @@ class Questions extends Migration
     public function down()
     {
         // Drop the quiz table if it exists
-        $this->forge->dropTable('quiz');
+        $this->forge->dropTable('questions');
     }
 }
