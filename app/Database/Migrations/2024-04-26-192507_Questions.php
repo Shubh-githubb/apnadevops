@@ -56,6 +56,10 @@ class Questions extends Migration
                 'type'       => 'TEXT',
                 'null'       => false,
             ],
+            'subject_code' => [
+                'type'       => 'INT',
+                'null'       => false,
+            ],
             'test_id' => [
                 'type'       => 'INT',
                 'null'       => false,
@@ -68,7 +72,7 @@ class Questions extends Migration
                 'type'       => 'INT',
                 'null'       => false,
             ],
-            'difficultly_level' => [
+            'difficulty_level' => [
                 'type'       => 'TEXT',
                 'null'       => false,
             ],

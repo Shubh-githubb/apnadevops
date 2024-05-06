@@ -4,15 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Paper extends Model
+class Tests extends Model
 {
-    protected $table            = 'papers';
-    protected $primaryKey       = 'pid';
+    protected $table            = 'tests';
+    protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['pid','paper_name' ,'paper_code' ,'free_test' ,'created_at' ,'updated_at' ];
+    protected $allowedFields    = [ 'paper_code', 'subject_code','test_name','test_description','views','likes','attempts'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -25,6 +25,7 @@ class Paper extends Model
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
+    protected $deletedField  = 'deleted_at';
 
     // Validation
     protected $validationRules      = [];

@@ -7,12 +7,12 @@ use CodeIgniter\Model;
 class Questions extends Model
 {
     protected $table            = 'questions';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'qid';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['qid','question','opt1','opt2','opt3','opt4','answer','description','correct','attempts','paper_code','subject_code','test_id','views','likes','difficulty_level','type','marks','negative_mark','created_at','updated_at'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -25,7 +25,6 @@ class Questions extends Model
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at';
 
     // Validation
     protected $validationRules      = [];

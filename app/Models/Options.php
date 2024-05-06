@@ -4,17 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Paper extends Model
+class Options extends Model
 {
-    protected $table            = 'papers';
-    protected $primaryKey       = 'pid';
+    protected $table            = 'options';
+    protected $primaryKey       = 'oid';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['pid','paper_name' ,'paper_code' ,'free_test' ,'created_at' ,'updated_at' ];
+    protected $allowedFields    = ['option_key','option_value'];
 
-    protected bool $allowEmptyInserts = false;
+    protected bool $allowEmptyInserts = true;
     protected bool $updateOnlyChanged = true;
 
     protected array $casts = [];
@@ -25,6 +25,7 @@ class Paper extends Model
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
+    protected $deletedField  = 'deleted_at';
 
     // Validation
     protected $validationRules      = [];
@@ -42,4 +43,14 @@ class Paper extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+
+    // public function insert(){
+    //     $data = array(
+    //         'option_key' => 'key',
+    //         'option_value' => 'value'
+    //     );
+    //     $this->insert($data);
+    // }
+
 }
